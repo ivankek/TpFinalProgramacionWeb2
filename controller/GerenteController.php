@@ -75,6 +75,8 @@ class GerenteController
         $id_arrastre = $_POST["id_arrastre"];
         $id_vehiculo = $_POST["id_vehiculo"];
         $id_usuario = $_POST["id_usuario"];
+        $viaje_enCurso = false;
+
 
         $precioCombustibleEstimado = $km_previsto / ($combustible_estimado * 85);
         $CostoTotalEstimado = $precioCombustibleEstimado + $CostoViaticos_estimado + $CostoPeajesEstimado + $CostoExtrasEstimado + $CostoFeeEstimado + $CostoHazardEstimado + $CostoReeferEstimado;
@@ -198,6 +200,7 @@ class GerenteController
             header("location: ../gerente?viajeNoBorrado");
         }
     }
+
 
 
     public function registrarVehiculo()
